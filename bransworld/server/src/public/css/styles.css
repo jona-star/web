@@ -1,0 +1,74 @@
+/* Brans´World dark theme overrides */
+:root {
+  --bw-bg: #0b0b0c;
+  --bw-surface: #121214;
+  --bw-text: #e7e7ea;
+  --bw-muted: #a1a1aa;
+  --bw-accent: #8b5cf6;
+}
+
+html, body {
+  background-color: var(--bw-bg);
+  color: var(--bw-text);
+}
+
+.navbar {
+  background-color: rgba(18, 18, 20, 0.8) !important;
+  backdrop-filter: blur(8px);
+}
+
+.card {
+  background-color: var(--bw-surface);
+  border: 1px solid #1f1f22;
+}
+
+.card-title, .card-text {
+  color: var(--bw-text);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, #111, var(--bw-accent));
+  color: white;
+  border: none;
+}
+
+.btn-accent:hover {
+  opacity: 0.95;
+}
+
+.hero {
+  min-height: 60vh;
+  background: url('https://images.unsplash.com/photo-1542060748-10c28b62716c?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(11,11,12,0.7), rgba(11,11,12,0.95));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.form-control, .form-select {
+  background-color: #0f0f11;
+  border-color: #2a2a2e;
+  color: var(--bw-text);
+}
+
+.table-dark {
+  --bs-table-bg: var(--bw-surface);
+  --bs-table-striped-bg: #16161a;
+  --bs-table-striped-color: var(--bw-text);
+}
+
+.footer {
+  border-top: 1px solid #1f1f22;
+}
+
